@@ -1,0 +1,69 @@
+<section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-stack-lg px-margin-mobile overflow-hidden bg-primary text-white">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(255,222,165,0.14),transparent_32%)] pointer-events-none"></div>
+  <canvas id="hero-canvas"></canvas>
+  <div class="absolute inset-0 pointer-events-none opacity-40 z-1" id="cellular-particles"></div>
+  <div class="relative z-10 max-w-7xl mx-auto w-full">
+    <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
+      <div class="space-y-8">
+        <span class="inline-flex items-center gap-2 rounded-full border border-secondary-fixed/20 bg-secondary-fixed/10 px-4 py-2 text-[11px] uppercase tracking-[0.35em] text-secondary-fixed shadow-sm">
+          <span class="h-2 w-2 rounded-full bg-secondary-fixed"></span>
+          Premium launch invitation
+        </span>
+        <div class="space-y-6">
+          <h1 class="font-display-lg text-5xl md:text-6xl lg:text-7xl leading-tight tracking-[-0.03em]">The Future of Nutrition<br/><span class="shimmer-gold italic font-light">is Almost Here</span></h1>
+          <p class="max-w-3xl text-on-primary-container/80 text-lg md:text-xl leading-relaxed font-light">Meticulously engineered for peak physiological performance. Experience a new standard in clinical-grade organic supplements designed for elite results and effortless recovery.</p>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-3">
+          <div class="rounded-[2rem] border border-white/10 bg-white/5 p-5 text-sm text-on-primary-container/85">
+            <p class="font-semibold text-secondary">Lab-formulated blends</p>
+            Clean, high-impact performance.
+          </div>
+          <div class="rounded-[2rem] border border-white/10 bg-white/5 p-5 text-sm text-on-primary-container/85">
+            <p class="font-semibold text-secondary">Traceable sourcing</p>
+            Premium botanicals & extracts.
+          </div>
+          <div class="rounded-[2rem] border border-white/10 bg-white/5 p-5 text-sm text-on-primary-container/85">
+            <p class="font-semibold text-secondary">Fast action</p>
+            Optimized for real recovery.
+          </div>
+        </div>
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+          <button class="inline-flex items-center justify-center rounded-full bg-secondary px-10 py-4 text-sm font-bold text-on-secondary shadow-2xl transition hover:bg-secondary-container hover:text-on-secondary-container" onclick="document.getElementById('cta')?.scrollIntoView()">Reserve Early Access</button>
+          <a href="#products" class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-10 py-4 text-sm text-white/90 transition hover:bg-white/10">Explore Formulations</a>
+        </div>
+        <div class="grid gap-3 sm:grid-cols-3">
+          <div class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/80">
+            <span class="material-symbols-outlined text-secondary-fixed">verified</span>
+            3rd Party Tested
+          </div>
+          <div class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/80">
+            <span class="material-symbols-outlined text-secondary-fixed">eco</span>
+            Clean Ingredients
+          </div>
+          <div class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/80">
+            <span class="material-symbols-outlined text-secondary-fixed">rocket_launch</span>
+            Launch Exclusive
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="relative overflow-hidden rounded-[3rem] border border-white/10 bg-white/10 p-6 shadow-[0_45px_100px_-40px_rgba(0,0,0,0.5)] backdrop-blur-xl">
+          <div class="absolute -left-8 -top-8 h-24 w-24 rounded-full bg-secondary-fixed/10 blur-3xl"></div>
+          <div class="absolute -right-8 bottom-8 h-24 w-24 rounded-full bg-secondary-fixed/10 blur-3xl"></div>
+          <img alt="Poshan supplement bottle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4jHC4ltovuUUGePR4fbtxI9Zmtu_plBX5LaIHKEziWieGAWdRDn8ld10tmdE2eD6qaD4Ei6HWBzTirX9YG-sggdv-KuvMMnOyKzAcWJRkRvzzdV1OVjqrU8DhFoSXnhhFm7xX1CTVxl1NWJ9EGDX7BITIuDB3bMJNId9DIcoYvDEDB7Av369cUsata5FO6_jzGKtYqdGejIQiKtFtqUbVm_4RwZclxU2LE6U2XUNzydy6LU9rRY5l7A6DgZVMbmvtNjNzfKrd8VE" class="h-[460px] w-full object-contain rounded-[2rem] transition duration-700" />
+          <div class="mt-8 grid gap-4 rounded-[2rem] border border-white/10 bg-surface/90 p-5">
+            <div class="flex items-center justify-between text-sm uppercase tracking-[0.25em] text-white/90">
+              <span>Active Blend</span><span>5 premium ingredients</span>
+            </div>
+            <div class="flex items-center justify-between text-sm uppercase tracking-[0.25em] text-white/90">
+              <span>Fast Absorption</span><span>Zero Fillers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-40 z-10 flex flex-col items-center">
+    <span class="material-symbols-outlined text-surface-dim text-3xl">expand_more</span>
+  </div>
+</section>

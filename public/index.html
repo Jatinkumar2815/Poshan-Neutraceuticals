@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>POSHAN | High-Performance Wellness</title>
+<meta content="The future of nutrition is coming. Poshan Nutraceuticals offers premium wellness supplements." name="description"/>
+<!-- External Resources -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#dadad8",
+                    "secondary-container": "#fed488",
+                    "on-background": "#1a1c1b",
+                    "secondary": "#775a19",
+                    "outline": "#727974",
+                    "on-primary": "#ffffff",
+                    "tertiary-container": "#362300",
+                    "on-surface-variant": "#414844",
+                    "on-error": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#c1c8c3",
+                    "tertiary": "#1b1000",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#ffdea5",
+                    "inverse-primary": "#adcebe",
+                    "surface-variant": "#e2e3e1",
+                    "on-tertiary-container": "#a98955",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#adcebe",
+                    "surface-container-high": "#e8e8e6",
+                    "primary": "#00160e",
+                    "tertiary-fixed-dim": "#e6c188",
+                    "on-secondary-fixed": "#261900",
+                    "surface-tint": "#466557",
+                    "surface": "#f9f9f7",
+                    "inverse-on-surface": "#f1f1ef",
+                    "surface-container": "#eeeeec",
+                    "on-primary-fixed-variant": "#2f4d40",
+                    "on-primary-container": "#759586",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#0d2c21",
+                    "on-tertiary-fixed-variant": "#5b4215",
+                    "surface-bright": "#f9f9f7",
+                    "surface-container-highest": "#e2e3e1",
+                    "inverse-surface": "#2f3130",
+                    "secondary-fixed-dim": "#e9c176",
+                    "on-tertiary-fixed": "#281900",
+                    "on-secondary-container": "#785a1a",
+                    "background": "#f9f9f7",
+                    "on-surface": "#1a1c1b",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#c8ead9",
+                    "on-primary-fixed": "#012016",
+                    "tertiary-fixed": "#ffdead",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f4f4f2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "stack-sm": "8px",
+                    "margin-mobile": "16px",
+                    "stack-lg": "32px",
+                    "section-gap": "120px",
+                    "margin-desktop": "64px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Manrope"],
+                    "label-sm": ["Manrope"],
+                    "label-bold": ["Manrope"],
+                    "headline-lg-mobile": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "display-lg": ["Manrope"],
+                    "body-md": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-secondary">
+        <div id="header"></div>
+        <main id="main-content"></main>
+        <div id="footer"></div>
+
+        <script>
+                async function loadPartial(id, path) {
+                        const res = await fetch(path);
+                        if (!res.ok) return;
+                        const html = await res.text();
+                        document.getElementById(id).innerHTML = html;
+                }
+
+                // load core partials, then load main script
+                (async () => {
+                        await loadPartial('header', 'partials/header.html');
+                        // main content placeholders
+                        await loadPartial('main-content', 'partials/hero.html');
+                        // append products, mission, mascot, cta into main-content
+                        const mainEl = document.getElementById('main-content');
+                        const parts = ['partials/products.html', 'partials/mission.html', 'partials/mascot.html', 'partials/cta.html'];
+                        for (const p of parts) {
+                                const r = await fetch(p);
+                                if (!r.ok) continue;
+                                const t = await r.text();
+                                const wrap = document.createElement('div');
+                                wrap.innerHTML = t;
+                                mainEl.appendChild(wrap);
+                        }
+                        await loadPartial('footer', 'partials/footer.html');
+                        // now load main.js
+                        const s = document.createElement('script');
+                        s.src = 'main.js';
+                        document.body.appendChild(s);
+                })();
+        </script>
+</body></html>
